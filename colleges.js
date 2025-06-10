@@ -23,13 +23,11 @@ function setupEventListeners() {
   const searchButton = document.getElementById('search-button');
   
   if (searchInput) {
-    // Search on input change
     searchInput.addEventListener('input', (e) => {
       console.log('Search input:', e.target.value);
       filterColleges();
     });
 
-    // Search on enter key
     searchInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
@@ -40,7 +38,6 @@ function setupEventListeners() {
     console.error('Search input element not found');
   }
 
-  // Search button click
   if (searchButton) {
     searchButton.addEventListener('click', (e) => {
       e.preventDefault();
@@ -51,8 +48,7 @@ function setupEventListeners() {
     console.error('Search button not found');
   }
 
-  // Add event listeners for other filters
-  ['course-filter', 'fee-filter', 'type-filter', 'rating-filter', 'sort-select'].forEach(id => {
+  ['course-filter', 'fee-filter', 'type-filter', 'rating-filter', 'sort-select', 'state-filter'].forEach(id => {
     const element = document.getElementById(id);
     if (element) {
       element.addEventListener('change', filterColleges);
@@ -61,15 +57,13 @@ function setupEventListeners() {
     }
   });
 
-  // Reset filters button
   const resetButton = document.getElementById('reset-filters');
   if (resetButton) {
     resetButton.addEventListener('click', resetFilters);
   } else {
     console.error('Reset filters button not found');
   }
-  
-  // Scroll event for animations
+
   window.addEventListener('scroll', reveal);
 }
 
@@ -80,6 +74,7 @@ function filterColleges() {
   const feeFilter = document.getElementById('fee-filter')?.value || '';
   const typeFilter = document.getElementById('type-filter')?.value.toLowerCase() || '';
   const ratingFilter = parseFloat(document.getElementById('rating-filter')?.value) || 0;
+  const stateFilter = document.getElementById('state-filter')?.value.toLowerCase() || '';
   const sortOption = document.getElementById('sort-select')?.value || 'name';
 
   console.log('Filter criteria:', {
@@ -88,6 +83,7 @@ function filterColleges() {
     feeFilter,
     typeFilter,
     ratingFilter,
+    stateFilter,
     sortOption
   });
 
@@ -97,15 +93,14 @@ function filterColleges() {
   }
 
   let filteredColleges = colleges.filter(college => {
-    // Safe check for college properties
     const collegeName = college?.name?.toLowerCase() || '';
     const collegeShortName = college?.shortName?.toLowerCase() || '';
     const collegeLocation = college?.location?.toLowerCase() || '';
     const collegeType = college?.type?.toLowerCase() || '';
     const collegeRating = college?.rating || 0;
+    const collegeState = college?.state?.toLowerCase() || '';
     const collegeCourses = Array.isArray(college?.courses) ? college.courses : [];
 
-    // Search term matching - now includes shortName
     const matchesSearch = !searchTerm || 
       collegeName.includes(searchTerm) ||
       collegeShortName.includes(searchTerm) ||
@@ -114,19 +109,17 @@ function filterColleges() {
         course?.name?.toLowerCase()?.includes(searchTerm) || false
       );
 
-    // Course filter matching
     const matchesCourse = !courseFilter || 
       collegeCourses.some(course => 
         course?.name?.toLowerCase()?.includes(courseFilter) || false
       );
 
-    // Type matching
     const matchesType = !typeFilter || collegeType === typeFilter;
 
-    // Rating matching
+    const matchesState = !stateFilter || collegeState === stateFilter;
+
     const matchesRating = collegeRating >= ratingFilter;
 
-    // Fee matching
     let matchesFee = true;
     if (feeFilter && collegeCourses.length > 0) {
       const [min, max] = feeFilter.split('-').map(Number);
@@ -140,22 +133,19 @@ function filterColleges() {
       }
     }
 
-    return matchesSearch && matchesCourse && matchesType && matchesRating && matchesFee;
+    return matchesSearch && matchesCourse && matchesType && matchesState && matchesRating && matchesFee;
   });
 
   console.log('Filtered colleges:', filteredColleges.length);
 
-  // Sort colleges
   filteredColleges = sortColleges(filteredColleges, sortOption);
-  
-  // Update results count
+
   const resultsCount = document.getElementById('results-count');
   if (resultsCount) {
     resultsCount.textContent = 
       `${filteredColleges.length} ${filteredColleges.length === 1 ? 'College' : 'Colleges'} Found`;
   }
 
-  // Show/hide no results message
   const noResults = document.getElementById('no-results');
   if (noResults) {
     noResults.style.display = filteredColleges.length === 0 ? 'block' : 'none';
@@ -187,11 +177,9 @@ function renderColleges(collegeData) {
   
   container.innerHTML = '';
 
-  // Update results count
   document.getElementById('results-count').textContent = 
     `${collegeData.length} ${collegeData.length === 1 ? 'College' : 'Colleges'} Found`;
 
-  // Show/hide no results message
   const noResults = document.getElementById('no-results');
   if (noResults) {
     noResults.style.display = collegeData.length === 0 ? 'block' : 'none';
@@ -201,12 +189,10 @@ function renderColleges(collegeData) {
     const card = document.createElement('div');
     card.className = 'college-card';
     
-    // Get the first course fee as the display fee
     const displayFee = college.courses && college.courses.length > 0 
       ? college.courses[0].fees 
       : 'Contact for fees';
     
-    // Get course names as a list
     const courseNames = college.courses 
       ? college.courses.map(course => course.name).join(', ')
       : '';
@@ -253,6 +239,7 @@ function resetFilters() {
   document.getElementById('fee-filter').value = '';
   document.getElementById('type-filter').value = '';
   document.getElementById('rating-filter').value = '';
+  document.getElementById('state-filter').value = '';
   document.getElementById('sort-select').value = 'name';
   
   renderColleges(colleges);
