@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta property="og:title" content="UniGate Dehradun">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta property="og:description" content="Explore top Dehradun colleges: fees, counseling &amp; more with stunning animations at UniGate Dehradun!">
+  <meta property="og:image" content="https://mocha-cdn.com/og.png" type="image/png">
+  <meta property="og:url" content="https://2jm2axv34tzvw.mocha.app">
+  <meta property="og:type" content="website">
+  <meta property="og:author" content="Mocha">
+  <meta property="og:site_name" content="UniGate Dehradun">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:site" content="@buildwithmocha">
+  <meta property="twitter:title" content="UniGate Dehradun">
+  <meta property="twitter:description" content="Explore top Dehradun colleges: fees, counseling &amp; more with stunning animations at UniGate Dehradun!">
+  <meta property="twitter:image" content="https://mocha-cdn.com/og.png" type="image/png">
+  <link rel="shortcut icon" href="https://mocha-cdn.com/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://mocha-cdn.com/apple-touch-icon.png" type="image/png">
+  <title>CollegeGate Dehradun</title>
+  <!-- Add AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="theme.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-content">
+      <a href="index.html" class="logo" aria-label="College Gate Home">
+        <img src="Classical_College_Gate_Logo__1_-removebg-preview.png" alt="College Gate Logo" width="180" height="50">
+        College<span>Gate</span>
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-wrapper" id="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="colleges.html" class="nav-link">Colleges</a></li>
+          <li><a href="counselling.html" class="nav-link">Counselling</a></li>
+          <li><a href="comparison.html" class="nav-link">Compare</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <a href="tel:+919193993693" class="contact-btn">
+            <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Call Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="bg-blob bg-blob-1"></div>
+        <div class="bg-blob bg-blob-2"></div>
+      </div>
+      
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">Discover the Best <span>Colleges</span> in Dehradun</h1>
+            <p class="hero-subtitle">
+              Find comprehensive information about colleges, fees, courses, and admission counselling to make informed decisions about your education.
+            </p>
+            <div class="hero-buttons">
+              <a href="colleges.html" class="btn-primary">Explore Colleges</a>
+              <a href="counselling.html" class="btn-secondary">Get Counselling</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="hero-image-container">
+              <div class="image-decoration image-decoration-1"></div>
+              <div class="image-decoration image-decoration-2"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=1000"
+                alt="University Campus">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    &nbsp;
+    &nbsp;
+    <!-- Search Section -->
+    <section class="search-section reveal">
+      <div class="container">
+        <div class="search-box">
+          <h2>Find Your Ideal College</h2>
+          <form class="search-form" id="college-search-form">
+            <div class="form-group">
+              <label>College Name</label>
+              <input type="text" placeholder="e.g. IIT Roorkee">
+            </div>
+            <div class="form-group">
+              <label>Course</label>
+              <select>
+                <option value="">All Courses</option>
+                <option value="btech">B.Tech</option>
+                <option value="mba">MBA</option>
+                <option value="bba">BBA</option>
+                <option value="msc">M.Sc.</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Fee Range</label>
+              <select>
+                <option value="">Any</option>
+                <option value="0-100000">Below ₹1 Lakh</option>
+                <option value="100000-200000">₹1 Lakh - ₹2 Lakh</option>
+                <option value="200000-500000">₹2 Lakh - ₹5 Lakh</option>
+                <option value="500000+">Above ₹5 Lakh</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary search-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              Search Colleges
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Featured Colleges -->
+    <section class="section featured-colleges reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Colleges</h2>
+          <p class="section-subtitle">Discover our top-rated institutions in Dehradun</p>
+        </div>
+        
+        <div class="featured-colleges-grid">
+          <!-- Graphic Era University -->
+          <div class="featured-college-card">
+            <div class="college-image">
+              <img src="assets/images/colleges/graphic-era/gallery/campus.webp" alt="Graphic Era University">
+              <div class="college-overlay">
+                <span class="college-rating">4.6 ★</span>
+                <span class="college-type" style="color: black;">Private</span>
+              </div>
+            </div>
+            <div class="college-info">
+              <h3>Graphic Era University</h3>
+              <p>NAAC A+ Accredited | Est. 1997</p>
+              <div class="college-highlights">
+                <span>Top Programs:</span>
+                <ul>
+                  <li>B.Tech in CSE</li>
+                  <li>BBA</li>
+                  <li>M.Tech</li>
+                </ul>
+              </div>
+              <a href="tel:+917060800800" class="contact-btn">Contact Now</a>
+            </div>
+          </div>
+
+          <!-- Jigyasa University -->
+          <div class="featured-college-card">
+            <div class="college-image">
+              <img src="assets/images/colleges/jigyasa/gallery/campus.webp" alt="Jigyasa University">
+              <div class="college-overlay">
+                <span class="college-rating">4.5 ★</span>
+                <span class="college-type" style="color: black;" >Private</span>
+              </div>
+            </div>
+            <div class="college-info">
+              <h3>Jigyasa University</h3>
+              <p>UGC Affiliated | Est. 1993</p>
+              <div class="college-highlights">
+                <span>Top Programs:</span>
+                <ul>
+                  <li>B.Tech</li>
+                  <li>MBA</li>
+                  <li>BBA</li>
+                </ul>
+              </div>
+              <a href="tel:+911352776055" class="contact-btn">Contact Now</a>
+            </div>
+          </div>
+
+          <!-- UPES -->
+          <div class="featured-college-card">
+            <div class="college-image">
+              <img src="assets/images/colleges/upes/gallery/campus.jpeg" alt="UPES">
+              <div class="college-overlay">
+                <span class="college-rating">4.5 ★</span>
+                <span class="college-type">Private</span>
+              </div>
+            </div>
+            <div class="college-info">
+              <h3>University of Petroleum and Energy Studies</h3>
+              <p>UGC Affiliated | Est. 1993</p>
+              <div class="college-highlights">
+                <span>Top Programs:</span>
+                <ul>
+                  <li>B.Tech in Petroleum</li>
+                  <li>MBA</li>
+                  <li>BBA</li>
+                </ul>
+              </div>
+              <a href="tel:+911352776055" class="contact-btn">Contact Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <a href="colleges.html" class="view-all-btn">
+            View All Colleges
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Team Section -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Gallery Showcase</title>
+    <link rel="stylesheet" href="team-gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <section class="team-gallery-section">
+      <div class="container">
+        <div class="gallery-header">
+          <h2 class="gallery-title">Meet Our Amazing Team</h2>
+          <p class="gallery-description">Dedicated professionals working together to transform education. Join us on our journey through Dehradun's top institutions.</p>
+        </div>
+
+        <div class="gallery-wrapper">
+          <!-- Navigation arrows -->
+          <button class="nav-btn prev-btn" aria-label="Previous item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6"/>
+            </svg>
+          </button>
+          <button class="nav-btn next-btn" aria-label="Next item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </button>
+
+          <!-- Scrollable gallery -->
+          <div class="gallery-container">
+            <!-- Item 1: Co-Founder -->
+            <div class="gallery-item">
+              <div class="item-content">
+                <div class="item-media">
+                  <img src="mukoot sir solo.JPG" alt="Our Co-Founder" class="item-image">
+                  <div class="item-overlay">
+                    <p class="item-location">Headquarters</p>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="item-title">Mukoot Yadav</h3>
+                  <p class="item-role">Our Co-Founder & CEO</p>
+                  <p class="item-description">Leading our vision to transform education accessibility</p>
+                </div>
+              </div>
+            </div>
+
+    <!-- Item 2:Jigyasa University Tour -->
+
+            <div class="gallery-item">
+              <div class="item-content">
+                <div class="item-media">
+                  <img src="Group photo(Jigyasa).JPG" alt="Jigyasa Tour" class="item-image">
+                  <div class="item-overlay">
+                    <p class="item-location">Dehradun</p>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="item-title">Jigyasa University Tour</h3>
+                  <p class="item-role">College Visit</p>
+                  <p class="item-description">Our team's visit to Jigyasa campus</p>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Item 2: Dev Bhoomi University Tour -->
+            <div class="gallery-item">
+              <div class="item-content">
+                <div class="item-media">
+                  <img src="Group photo (Dev Bhoomi).JPG" alt="Dev Bhoomi University Tour" class="item-image">
+                  <div class="item-overlay">
+                    <p class="item-location">Dehradun</p>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="item-title">Dev Bhoomi University Tour</h3>
+                  <p class="item-role">College Visit</p>
+                  <p class="item-description">Our team's visit to Dev Bhoomi University campus</p>
+                </div>
+              </div>
+            </div>
+
+              <!-- Item 2: Ritik  Tour -->
+
+
+              <div class="gallery-item">
+                <div class="item-content">
+                  <div class="item-media">
+                    <img src="Ritik (Jigyasa).JPG" alt="Jigyasa University Tour" class="item-image">
+                    <div class="item-overlay">
+                      <p class="item-location">Dehradun</p>
+                    </div>
+                  </div>
+                  <div class="item-details">
+                    <h3 class="item-title">Our Web Development Team HEAD</h3>
+                    <p class="item-role">College Visit to Jigyasa University</p>
+                    <p class="item-description">Our team's visit to Jigyasa campus</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Item 2:HR Team -->
+
+
+              <div class="gallery-item">
+                <div class="item-content">
+                  <div class="item-media">
+                    <img src="HR Team.JPG" alt="HR" class="item-image">
+                    <div class="item-overlay">
+                      <p class="item-location">Dehradun</p>
+                    </div>
+                  </div>
+                  <div class="item-details">
+                    <h3 class="item-title">Our HR and Digital Marketing HEAD</h3>
+                    <p class="item-role">College Visit of our Seniors to Jigyasa University</p>
+                    <p class="item-description">Our team's visit to Jigyasa campus</p>
+                  </div>
+                </div>
+              </div>
+            
+            <!-- Item 3: Dev Bhoomi  University (Video) -->
+
+            <div class="gallery-item">
+              <div class="item-content">
+                <div class="item-media video-media">
+                <video class="item-video" autoplay muted loop playsinline>
+                    <source src="DEv bhoomi video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <div class="video-play-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polygon points="10 8 16 12 10 16 10 8"/>
+                    </svg>
+                  </div>
+                  <div class="item-overlay">
+                    <p class="item-location">Campus Outreach</p>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="item-title">Our Counselling Team </h3>
+                  <p class="item-role">Partnership Event</p>
+                  <p class="item-description">Interactive session with students at Dev Bhoomi University</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4: GRD Dehradun Visit -->
+            <div class="gallery-item">
+              <div class="item-content">
+                <div class="item-media">
+                  <img src="group photo GRD.JPG" alt="GRD Dehradun Visit" class="item-image">
+                  <div class="item-overlay">
+                    <p class="item-location">Dehradun</p>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="item-title">GRD Dehradun Visit</h3>
+                  <p class="item-role">College Tour</p>
+                  <p class="item-description">Meeting with faculty and students at GRD Dehradun</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5: Team Building Retreat (Video) -->
+            <div class="gallery-item">
+              <div class="item-content">
+                <div class="item-media video-media">
+                 <video class="item-video" autoplay muted loop playsinline>
+                    <source src="mukoot sir speech.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <div class="video-play-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polygon points="10 8 16 12 10 16 10 8"/>
+                    </svg>
+                  </div>
+                  <div class="item-overlay">
+                    <p class="item-location">Mussoorie</p>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="item-title">Team Building Retreat</h3>
+                  <p class="item-role">Company Event</p>
+                  <p class="item-description">Our annual team-building retreat in the mountains</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6: Career Fair -->
+            <div class="gallery-item">
+              <div class="item-content">
+                <div class="item-media">
+                  <img src="SHEHNAAZ (JIGYASA) 1.JPG" alt="Career Fair" class="item-image">
+                  <div class="item-overlay">
+                    <p class="item-location">Multiple Campuses</p>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="item-title">Career Fair</h3>
+                  <p class="item-role">Outreach Event</p>
+                  <p class="item-description">Helping students find their path at our annual career fair</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination indicators -->
+          <div class="pagination-container">
+            <button class="pagination-dot active" data-index="0" aria-label="Go to slide 1"></button>
+            <button class="pagination-dot" data-index="1" aria-label="Go to slide 2"></button>
+            <button class="pagination-dot" data-index="2" aria-label="Go to slide 3"></button>
+            <button class="pagination-dot" data-index="3" aria-label="Go to slide 4"></button>
+            <button class="pagination-dot" data-index="4" aria-label="Go to slide 5"></button>
+            <button class="pagination-dot" data-index="5" aria-label="Go to slide 6"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Elements
+        const galleryContainer = document.querySelector('.gallery-container');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const paginationDots = document.querySelectorAll('.pagination-dot');
+        
+        // Variables
+        let activeIndex = 0;
+        let autoScrollInterval;
+        let autoScrollEnabled = true;
+        const autoScrollDelay = 4000;
+
+        // Initialize
+        function init() {
+          updateGallery();
+          startAutoScroll();
+          setupEventListeners();
+        }
+
+        // Update gallery position
+        function updateGallery() {
+          const itemWidth = galleryItems[0].offsetWidth;
+          galleryContainer.scrollTo({
+            left: itemWidth * activeIndex,
+            behavior: 'smooth'
+          });
+          
+          // Update pagination dots
+          paginationDots.forEach((dot, index) => {
+            if (index === activeIndex) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+
+        // Start auto-scrolling
+        function startAutoScroll() {
+          clearInterval(autoScrollInterval);
+          if (!autoScrollEnabled) return;
+          
+          autoScrollInterval = setInterval(() => {
+            activeIndex = (activeIndex + 1) % galleryItems.length;
+            updateGallery();
+          }, autoScrollDelay);
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+          // Previous button
+          prevBtn.addEventListener('click', () => {
+            pauseAutoScroll();
+            activeIndex = activeIndex === 0 ? galleryItems.length - 1 : activeIndex - 1;
+            updateGallery();
+          });
+          
+          // Next button
+          nextBtn.addEventListener('click', () => {
+            pauseAutoScroll();
+            activeIndex = (activeIndex + 1) % galleryItems.length;
+            updateGallery();
+          });
+          
+          // Pagination dots
+          paginationDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+              pauseAutoScroll();
+              activeIndex = index;
+              updateGallery();
+            });
+          });
+          
+          // Handle scroll end to detect which item is in view
+          galleryContainer.addEventListener('scroll', debounce(() => {
+            const itemWidth = galleryItems[0].offsetWidth;
+            const scrollLeft = galleryContainer.scrollLeft;
+            activeIndex = Math.round(scrollLeft / itemWidth);
+            if (activeIndex >= galleryItems.length) activeIndex = galleryItems.length - 1;
+            if (activeIndex < 0) activeIndex = 0;
+            updatePaginationDots();
+          }, 100));
+        }
+
+        // Pause auto-scroll temporarily
+        function pauseAutoScroll() {
+          autoScrollEnabled = false;
+          clearInterval(autoScrollInterval);
+          
+          // Resume auto-scroll after 8 seconds of inactivity
+          setTimeout(() => {
+            autoScrollEnabled = true;
+            startAutoScroll();
+          }, 8000);
+        }
+
+        // Update pagination dots
+        function updatePaginationDots() {
+          paginationDots.forEach((dot, index) => {
+            if (index === activeIndex) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+
+        // Helper: Debounce function
+        function debounce(func, wait) {
+          let timeout;
+          return function(...args) {
+            const context = this;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(context, args), wait);
+          };
+        }
+
+        // Initialize the gallery
+        init();
+      });
+    </script>
+
+    
+    <!-- Features Section -->
+    <section class="section features-section reveal">
+      <div class="container">
+        <h2 class="section-title">Why Choose CollegeGate?</h2>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><path d="M9 15V9h6v6"></path><path d="M9 9l6 6"></path></svg>
+            </div>
+            <h3>Comprehensive College Database</h3>
+            <p>
+              Access detailed information about all major colleges in Dehradun, including facilities, courses, and fees.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3>Counselling Sessions</h3>
+            <p>
+              Schedule personalized counselling sessions with experienced advisors to help guide your college decision.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
+            <h3>Admission Guidance</h3>
+            <p>
+              Get step-by-step guidance on application processes, important dates, and document requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Reviews Section -->
+    <section class="section reviews-section reveal">
+      <div class="container">
+        <h2 class="section-title">What Our Students Say</h2>
+        <p class="section-subtitle">Real experiences from students who found their perfect college through CollegeGate</p>
+        
+        <div class="reviews-grid">
+          <!-- Review Card 1 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <img src="Ritik (Jigyasa).JPG" alt="Ritik" class="reviewer-image">
+                <div class="reviewer-details">
+                  <h3 class="reviewer-name">Ritik Kumar</h3>
+                  <p class="reviewer-college">Jigyasa University</p>
+                </div>
+              </div>
+              <div class="review-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">5.0</span>
+              </div>
+            </div>
+            <div class="review-content">
+              <p>"CollegeGate made my college selection process so much easier. Their counselors provided personalized guidance and helped me make an informed decision. Now I'm studying at my dream college!"</p>
+            </div>
+            <div class="review-footer">
+              <span class="review-date">October 2023</span>
+              <span class="course-info">B.Tech CSE</span>
+            </div>
+          </div>
+
+          <!-- Review Card 2 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <img src="SHEHNAAZ (JIGYASA) 1.JPG" alt="Shehnaaz" class="reviewer-image">
+                <div class="reviewer-details">
+                  <h3 class="reviewer-name">Shehnaaz</h3>
+                  <p class="reviewer-college">Jigyasa University</p>
+                </div>
+              </div>
+              <div class="review-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.9</span>
+              </div>
+            </div>
+            <div class="review-content">
+              <p>"The team at CollegeGate went above and beyond to help me understand different college options. Their insights about campus life and course structure were invaluable in making my decision."</p>
+            </div>
+            <div class="review-footer">
+              <span class="review-date">September 2023</span>
+              <span class="course-info">BBA</span>
+            </div>
+          </div>
+
+          <!-- Review Card 3 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <img src="sai group.png" alt="Sai" class="reviewer-image">
+                <div class="reviewer-details">
+                  <h3 class="reviewer-name">Sai Group</h3>
+                  <p class="reviewer-college">Graphic Era University</p>
+                </div>
+              </div>
+              <div class="review-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.8</span>
+              </div>
+            </div>
+            <div class="review-content">
+              <p>"What sets CollegeGate apart is their deep understanding of each college's unique strengths. They helped me find a program that perfectly matches my career aspirations."</p>
+            </div>
+            <div class="review-footer">
+              <span class="review-date">September 2023</span>
+              <span class="course-info">MBA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Stats -->
+        <div class="review-stats">
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Students Guided</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4.6+</span>
+            <span class="stat-label">Average Rating</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">97%</span>
+            <span class="stat-label">Success Rate</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Partner Colleges</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section reveal">
+      <div class="container">
+        <h2>Ready to Find Your Perfect College?</h2>
+        <p>
+          Start your educational journey today with CollegeGate. We're here to help you make the right choice for your future.
+        </p>
+        <div class="cta-buttons">
+          <a href="colleges.html" class="btn-light">Explore Colleges</a>
+          <a href="contact.html" class="btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-logo">College<span>Gate</span></h3>
+          <p>
+            Your comprehensive guide to colleges in Dehradun.
+            Get information about fees, admission process, and counselling.
+          </p>
+          <div class="social-links">
+            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link facebook" aria-label="Follow us on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              <!-- <span class="social-tooltip">Facebook</span> -->
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link twitter" aria-label="Follow us on X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4l11.5 11.5M4 20L20 4" />
+                <path d="M19 5L5 19" />
+              </svg>
+              <!-- <span class="social-tooltip">Twitter</span> -->
+            </a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Follow us on Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <!-- <span class="social-tooltip">Instagram</span> -->
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link linkedin" aria-label="Follow us on LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <!-- <span class="social-tooltip">LinkedIn</span> -->
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="colleges.html">Colleges</a></li>
+            <li><a href="counselling.html">Counselling</a></li>
+            <li><a href="comparison.html">Compare Fees</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Top Colleges</h3>
+          <ul class="footer-links">
+            <li><a href="#">UPES</a></li>
+            <li><a href="#">Graphic Era University</a></li>
+            <li><a href="#">Jigyasa University</a></li>
+            <li><a href="#">COER University</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <div class="contact-info">
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Ballupur, GMS Road, Dehradun, Uttarakhand - 248001
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              +91 9193993693
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              info@collegegate.co
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> CollegeGate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="theme.js"></script>
+  <script src="utils.js"></script>
+
+  <!-- Floating Chat Container -->
+  <div class="chat-container" id="chat-container">
+    <div class="chat-frame" id="chat-frame">
+      <iframe src="https://cgbot.onrender.com/" frameborder="0"></iframe>
+    </div>
+    <button class="floating-chat-btn" id="chat-toggle">
+      <div class="chat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </div>
+    </button>
+  </div>
+
+  <script>
+    // Chat toggle functionality
+    document.getElementById('chat-toggle').addEventListener('click', function() {
+      const chatFrame = document.getElementById('chat-frame');
+      chatFrame.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mainNav = document.getElementById('main-nav');
+    const body = document.body;
+    
+    // Create overlay element
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'menu-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    function toggleMenu() {
+      const isOpen = mainNav.classList.contains('active');
+      
+      if (isOpen) {
+        mainNav.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        mainNav.classList.add('active');
+        mobileMenuBtn.classList.add('active');
+        overlay.classList.add('active');
+        body.style.overflow = 'hidden';
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // Toggle menu on button click
+    mobileMenuBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+
+    // Close menu on window resize if open
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991 && mainNav.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
+
+    // Handle scroll
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      const header = document.getElementById('header');
+      
+      if (currentScroll <= 0) {
+        header.classList.remove('scroll-up');
+        header.classList.remove('scroll-down');
+        return;
+      }
+      
+      if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+        // Scrolling down
+        header.classList.remove('scroll-up');
+        header.classList.add('scroll-down');
+      } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+        // Scrolling up
+        header.classList.remove('scroll-down');
+        header.classList.add('scroll-up');
+      }
+      lastScroll = currentScroll;
+    });
+  </script>
+  
+</body>
+</html>

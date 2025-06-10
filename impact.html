@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Impact - College Gate</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="impact.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      color: #00f7ff;
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+    }
+
+    .impact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .impact-box {
+      background: #1c2c3b;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .impact-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .counter {
+      font-size: 3rem;
+      color: #00f7ff;
+      font-weight: bold;
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .home-link {
+      margin-top: 60px;
+      display: inline-block;
+      color: #00f7ff;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-content">
+      <a href="index.html" class="logo" aria-label="College Gate Home">
+        <img src="Classical_College_Gate_Logo__1_-removebg-preview.png" alt="College Gate Logo" width="180" height="50">
+        College<span>Gate</span>
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-wrapper" id="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="colleges.html" class="nav-link">Colleges</a></li>
+          <li><a href="counselling.html" class="nav-link">Counselling</a></li>
+          <li><a href="comparison.html" class="nav-link">Compare</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <a href="tel:+919193993693" class="contact-btn">
+            <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Call Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <h1>Our Impact</h1>
+  <div class="impact-container">
+    <div class="impact-box">
+      <div class="counter" data-target="25000">0</div>
+      <div class="label">Students Counseled</div>
+    </div>
+    <div class="impact-box">
+      <div class="counter" data-target="200">0</div>
+      <div class="label">Partner Colleges</div>
+    </div>
+    <div class="impact-box">
+      <div class="counter" data-target="15000">0</div>
+      <div class="label">Admissions Completed</div>
+    </div>
+    <div class="impact-box">
+      <div class="counter" data-target="95">0</div>
+      <div class="label">Placement Success Rate (%)</div>
+    </div>
+  </div>
+
+  <a class="home-link" href="index.html">← Go Back to Main Page</a>
+
+  <script src="script.js"></script>
+  <script src="impact.js"></script>
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      counter.innerText = '0';
+
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = target / 200;
+
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(updateCounter, 10);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+
+      updateCounter();
+    });
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mainNav = document.getElementById('main-nav');
+    const body = document.body;
+    
+    // Create overlay element
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'menu-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    function toggleMenu() {
+      const isOpen = mainNav.classList.contains('active');
+      
+      if (isOpen) {
+        mainNav.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        mainNav.classList.add('active');
+        mobileMenuBtn.classList.add('active');
+        overlay.classList.add('active');
+        body.style.overflow = 'hidden';
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // Toggle menu on button click
+    mobileMenuBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+
+    // Close menu on window resize if open
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991 && mainNav.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
+  </script>
+</body>
+</html>

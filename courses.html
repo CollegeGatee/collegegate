@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses - College Gate</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="courses.css">
+  <style>
+    body { font-family: 'Segoe UI'; background:#0f2027; color:#fff; margin:0; padding:20px;}
+    h1 {text-align:center; font-size:2.2rem; color:#00f7ff;}
+    .course-container {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+    .course-card {background:#111; border-radius:12px; padding:20px; width:280px; box-shadow:0 5px 15px rgba(0,255,255,0.2);}
+    .course-card:hover {transform:scale(1.05);}
+    .course-card h2 {color:#00f7ff;}
+    .course-card p {font-size:0.95rem; line-height:1.5;}
+    .home-link {display:block; margin:40px auto 0; text-align:center; color:#00f7ff; font-weight:bold;}
+
+    /* Mobile Menu Styles */
+    .menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      z-index: 999;
+    }
+
+    .menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .menu-icon-close {
+      display: none;
+    }
+
+    .mobile-menu-btn.active .menu-icon-hamburger {
+      display: none;
+    }
+
+    .mobile-menu-btn.active .menu-icon-close {
+      display: block;
+    }
+
+    @media (max-width: 991px) {
+      .nav-wrapper {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: var(--header-bg);
+        padding: 80px 2rem 2rem;
+        transition: right 0.3s ease;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 1000;
+      }
+
+      .nav-wrapper.active {
+        right: 0;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+      }
+
+      .nav-actions {
+        margin-top: 2rem;
+        width: 100%;
+      }
+
+      .mobile-menu-btn {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-content">
+      <a href="index.html" class="logo" aria-label="College Gate Home">
+        <img src="Classical_College_Gate_Logo__1_-removebg-preview.png" alt="College Gate Logo" width="180" height="50">
+        College<span>Gate</span>
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <svg class="menu-icon menu-icon-hamburger" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        <svg class="menu-icon menu-icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+      <div class="nav-wrapper" id="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="colleges.html" class="nav-link">Colleges</a></li>
+          <li><a href="counselling.html" class="nav-link">Counselling</a></li>
+          <li><a href="comparison.html" class="nav-link">Compare</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <a href="tel:+919193993693" class="contact-btn">
+            <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Call Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <h1>Popular Courses at College Gate</h1>
+  <div class="course-container">
+    <div class="course-card">
+      <h2>Engineering</h2>
+      <p>Specializations: CS, Civil, Mechanical, Electrical, AI & more. Duration: 4 Years</p>
+    </div>
+    <div class="course-card">
+      <h2>Management</h2>
+      <p>Specializations: BBA, MBA (Marketing, HR, Finance). Duration: 3-2 Years</p>
+    </div>
+    <div class="course-card">
+      <h2>Pharmacy</h2>
+      <p>B.Pharm, M.Pharm available. Focus on research & Pharmaceutical practices. Duration: 4 Years</p>
+    </div>
+    <div class="course-card">
+      <h2>Law</h2>
+      <p>BA-LLB, BBA-LLB, LLM (Criminal Law, Civil Law). Duration: 5 Years</p>
+    </div>
+    <div class="course-card">
+      <h2>Mass Communication</h2>
+      <p>Courses in Digital Marketing, Journalism, Media Management. Duration: 3 Years</p>
+    </div>
+  </div>
+  <a class="home-link" href="index.html">← Go Back to Main Page</a>
+
+  <script src="script.js"></script>
+  <script src="courses.js"></script>
+  <script>
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mainNav = document.getElementById('main-nav');
+    const body = document.body;
+    
+    // Create overlay element
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'menu-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    function toggleMenu() {
+      const isOpen = mainNav.classList.contains('active');
+      
+      if (isOpen) {
+        mainNav.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        mainNav.classList.add('active');
+        mobileMenuBtn.classList.add('active');
+        overlay.classList.add('active');
+        body.style.overflow = 'hidden';
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // Toggle menu on button click
+    mobileMenuBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+
+    // Close menu on window resize if open
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991 && mainNav.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
+
+    // Handle scroll
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      const header = document.getElementById('header');
+      
+      if (currentScroll <= 0) {
+        header.classList.remove('scroll-up');
+        header.classList.remove('scroll-down');
+        return;
+      }
+      
+      if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+        // Scrolling down
+        header.classList.remove('scroll-up');
+        header.classList.add('scroll-down');
+      } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+        // Scrolling up
+        header.classList.remove('scroll-down');
+        header.classList.add('scroll-up');
+      }
+      lastScroll = currentScroll;
+    });
+  </script>
+</body>
+</html>

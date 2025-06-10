@@ -1,0 +1,1053 @@
+html, body {
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  main {
+    background: var(--background);
+  }
+
+  .header {
+    position: relative;
+    z-index: 1000;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .comparison-hero {
+    background: var(--card-bg);
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  
+  .comparison-hero::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(var(--primary-color), 0.1);
+    z-index: 0;
+  }
+  
+  .comparison-hero h1 {
+    color: var(--text);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .comparison-hero p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .comparison-filters {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+  }
+  
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .filter-group {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--text);
+  }
+  
+  .filter-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    background-color: var(--input-bg);
+    color: var(--text);
+  }
+
+  .filter-select option {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+  
+  .filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-color-transparent);
+  }
+  
+  .compare-btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .compare-btn:hover {
+    background-color: var(--primary-color-hover);
+  }
+  
+  .comparison-table-container {
+    overflow-x: auto;
+    background-color: var(--card-bg);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+  }
+  
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    border-radius: 0.75rem;
+  }
+
+  thead {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  th {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--header-text-color) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    background-color: var(--header-bg);
+    border-right: 1px solid var(--border);
+    text-align: left;
+    min-width: 120px;
+  }
+
+  th:last-child {
+    border-right: none;
+  }
+  
+  td {
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    color: var(--text);
+    background-color: var(--card-bg);
+  }
+
+  td:last-child {
+    border-right: none;
+  }
+
+  tbody tr:hover {
+    background-color: var(--hover-bg);
+  }
+
+  .comparison-table th.feature-col {
+    width: 200px;
+  }
+  
+  .comparison-table th.college-col {
+    width: 250px;
+  }
+  
+  .comparison-table tr:hover {
+    background-color: var(--hover-bg);
+  }
+  
+  .comparison-table tr {
+    background-color: var(--card-bg);
+  }
+
+  .comparison-table tbody tr:nth-child(even) {
+    background-color: var(--hover-bg);
+  }
+
+  .comparison-table tbody tr:hover {
+    background-color: var(--hover-bg);
+  }
+  
+  .college-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .college-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    background-color: var(--card-bg);
+  }
+  
+  .college-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .college-name {
+    font-weight: 600;
+    color: var(--heading);
+  }
+  
+  .fee-amount {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .chart-container {
+    margin-top: 2rem;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  
+  .chart-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--heading);
+  }
+  
+  .chart {
+    height: 400px;
+    position: relative;
+    background-color: var(--card-bg);
+  }
+  
+  .bar-container {
+    display: flex;
+    height: 100%;
+    padding-top: 1.5rem;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .bar {
+    width: 80px;
+    background: linear-gradient(to top, var(--primary-color), var(--primary-color-light));
+    border-radius: 6px 6px 0 0;
+    position: relative;
+  }
+  
+  .bar:hover {
+    filter: brightness(1.1);
+  }
+
+  .bar-label {
+    font-weight: 500;
+    color: var(--text);
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  .footer-logo span {
+    color: var(--primary-color);
+  }
+
+  .footer-links a {
+    color: var(--text);
+  }
+
+  .footer-links a:hover {
+    color: var(--primary-color);
+  }
+
+  .social-link {
+    color: var(--text);
+  }
+
+  .social-link:hover {
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    .filter-row {
+      flex-direction: column;
+    }
+    
+    .filter-group {
+      width: 100%;
+    }
+    
+    .bar {
+      width: 60px;
+    }
+  }
+ /* Base Styles */
+ :root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-color-transparent: rgba(37, 99, 235, 0.1);
+    --primary-color-rgb: 37, 99, 235;
+    --secondary-color: #10b981;
+    --text-dark: var(--text);
+    --text-light: var(--text-light);
+    --text-muted: var(--text-light);
+    --bg-light: var(--background);
+    --bg-white: var(--card-bg);
+    --border-color: var(--border);
+    --shadow-sm: 0 1px 2px 0 var(--shadow);
+    --shadow-md: 0 4px 6px -1px var(--shadow);
+    --shadow-lg: 0 10px 15px -3px var(--shadow);
+    --radius: 0.375rem;
+    --fees-low-color: #10b981;
+    --fees-medium-color: #d97706;
+    --fees-high-color: #dc2626;
+    --header-text-color: var(--text);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--background);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 4px var(--shadow);
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+header p {
+    color: var(--text-light);
+    margin-top: 0.25rem;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 0;
+    text-align: center;
+    color: var(--text-light);
+}
+
+/* Component Styles */
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.search-input {
+    position: relative;
+}
+
+.search-input input,
+.filter-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: var(--input-bg);
+    color: var(--text);
+}
+
+.search-input input {
+    width: 240px;
+    padding-right: 2.5rem;
+}
+
+.search-input i,
+.filter-select-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.filter-select {
+    padding-right: 2.5rem;
+    appearance: none;
+    background-color: var(--bg-white);
+    width: 240px;
+    cursor: pointer;
+}
+
+.filter-select-wrapper {
+    position: relative;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    border: none;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--bg-white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color-transparent);
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn .badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.125rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+}
+
+/* Table styles */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--header-text-color) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    background-color: var(--header-bg);
+    border-right: 1px solid var(--border);
+    text-align: left;
+    min-width: 120px;
+}
+
+td {
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background-color: var(--hover-bg);
+}
+
+.sortable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.sortable:after {
+    content: '⇅';
+    margin-left: 0.25rem;
+    font-size: 0.875rem;
+}
+
+/* College logo */
+.college-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg);
+    border-radius: 50%;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+}
+
+.college-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.college-name {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.badge-green {
+    display: inline-flex;
+    padding: 0.125rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    margin-top: 0.25rem;
+}
+
+.fees-low {
+    color: var(--fees-low-color) !important;
+    font-weight: 600;
+}
+
+.fees-medium {
+    color: var(--fees-medium-color) !important;
+    font-weight: 600;
+}
+
+.fees-high {
+    color: var(--fees-high-color) !important;
+    font-weight: 600;
+}
+
+.fees-info {
+    display: flex;
+    align-items: center;
+    color: var(--text) !important;
+    cursor: pointer;
+    gap: 0.25rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.fees-tooltip {
+    position: absolute;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 0.75rem 1rem;
+    width: 12rem;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    border: 1px solid var(--border);
+}
+
+.fees-info:hover .fees-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    font-size: 0.875rem;
+    color: var(--text);
+}
+
+.tooltip-item:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+/* Helper Box */
+.helper-box {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border: 1px solid var(--border);
+}
+
+.helper-box-title {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.helper-box-text {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+}
+
+.modal-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--header-bg);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.modal-close {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: background-color 0.2s;
+}
+
+.modal-close:hover {
+    background-color: var(--hover-bg);
+}
+
+.modal-body {
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+}
+
+.college-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.college-header-item {
+    display: flex;
+    align-items: center;
+}
+
+.college-header-logo {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebf4ff;
+    border-radius: var(--radius);
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.college-header-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Chart styles */
+.chart-container {
+    height: 400px;
+    margin-bottom: 2.5rem;
+}
+
+.chart-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* Course grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.course-item {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+}
+
+.course-name {
+    font-size: 1.125rem;
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+.course-availability {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.available {
+    color: #059669;
+}
+
+.not-available {
+    color: #dc2626;
+}
+
+/* Chart canvas */
+#comparisonChart {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-input input, 
+    .filter-select {
+        width: 100%;
+    }
+    
+    .college-header {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hero Section */
+.counselling-hero {
+    background: linear-gradient(135deg, var(--primary-color-transparent) 0%, transparent 100%);
+    border-radius: 1.5rem;
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px var(--shadow);
+    text-align: center;
+}
+
+.hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    animation: pulse 8s ease-in-out infinite;
+    opacity: 0.3;
+}
+
+.hero-blob-1 {
+    top: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(var(--primary-color-rgb), 0.15);
+}
+
+.hero-blob-2 {
+    bottom: -30%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--text);
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title span {
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+    z-index: 5;
+}
+
+.hero-title span::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--primary-color);
+    opacity: 0.2;
+    border-radius: 4px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Card Styles */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--card-shadow);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text);
+    text-align: center;
+    position: relative;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.card-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .counselling-hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+}

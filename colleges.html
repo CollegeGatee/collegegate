@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colleges - CollegeGate</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="colleges.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-content">
+      <a href="index.html" class="logo" aria-label="College Gate Home">
+        <img src="Classical_College_Gate_Logo__1_-removebg-preview.png" alt="College Gate Logo" width="180" height="50">
+        College<span>Gate</span>
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-wrapper" id="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="colleges.html" class="nav-link active">Colleges</a></li>
+          <li><a href="counselling.html" class="nav-link">Counselling</a></li>
+          <li><a href="comparison.html" class="nav-link">Compare</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <a href="tel:+919193993693" class="contact-btn">
+            <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Call Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Spacer -->
+  <div style="height: 80px;"></div>
+
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="container">
+      <!-- Colleges Hero Section -->
+      <section class="colleges-hero">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <h1 class="hero-title">Discover the Best Colleges in Dehradun</h1>
+        <p>Explore comprehensive information about top colleges in Dehradun. Compare fees, courses, and facilities to make an informed decision about your future.</p>
+      </section>
+      
+      <!-- Filter Section -->
+      <section class="filter-section">
+        <div class="search-box-large">
+          <input type="text" id="college-search" placeholder="Search colleges by name, course, or location...">
+          <button id="search-button" class="search-button" aria-label="Search colleges">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="filter-grid">
+          <select class="filter-select" id="course-filter">
+            <option value="">All Courses</option>
+            <option value="btech">B.Tech</option>
+            <option value="mba">MBA</option>
+            <option value="bba">BBA</option>
+            <option value="mca">MCA</option>
+          </select>
+          <select class="filter-select" id="fee-filter">
+            <option value="">Fee Range</option>
+            <option value="0-200000">Under ₹2 Lakhs</option>
+            <option value="200000-400000">₹2-4 Lakhs</option>
+            <option value="400000+">Above ₹4 Lakhs</option>
+          </select>
+          <select class="filter-select" id="type-filter">
+            <option value="">College Type</option>
+            <option value="government">Government</option>
+            <option value="private">Private</option>
+            <option value="deemed">Deemed</option>
+          </select>
+          <select class="filter-select" id="rating-filter">
+            <option value="">Rating</option>
+            <option value="4.5">4.5+ ★</option>
+            <option value="4.0">4.0+ ★</option>
+            <option value="3.5">3.5+ ★</option>
+          </select>
+        </div>
+      </section>
+      
+      <!-- Results Section -->
+      <section class="colleges-results">
+        <div class="results-header">
+          <h2 id="results-count">Colleges Found</h2>
+          <div class="sort-options">
+            <span>Sort by:</span>
+            <select id="sort-select">
+              <option value="name">Name</option>
+              <option value="rating">Rating</option>
+              <option value="fees">Fees</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- College Grid -->
+        <div id="colleges-grid" class="college-grid">
+          <!-- College cards will be added here by JavaScript -->
+        </div>
+        
+        <!-- No Results Message -->
+        <div id="no-results" class="no-results" style="display: none;">
+          <div class="no-results-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          </div>
+          <h3>No Colleges Found</h3>
+          <p>We couldn't find any colleges matching your filters. Try adjusting your search criteria or clear all filters to see all options.</p>
+          <button id="reset-filters" class="btn-primary">Clear All Filters</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-logo">College<span>Gate</span></h3>
+          <p>Your comprehensive guide to colleges in Dehradun. Get information about fees, admission process, and counselling.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="colleges.html">Colleges</a></li>
+            <li><a href="counselling.html">Counselling</a></li>
+            <li><a href="comparison.html">Compare Fees</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <div class="contact-info">
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              GMS Road, Dehradun, Uttarakhand - 248001
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              +91 9193993693
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              info@collegegate.co
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 CollegeGate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="theme.js"></script>
+  <script src="colleges.js"></script>
+  <script>
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mainNav = document.getElementById('main-nav');
+    const body = document.body;
+    
+    // Create overlay element
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'menu-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    function toggleMenu() {
+      const isOpen = mainNav.classList.contains('active');
+      
+      if (isOpen) {
+        mainNav.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        mainNav.classList.add('active');
+        mobileMenuBtn.classList.add('active');
+        overlay.classList.add('active');
+        body.style.overflow = 'hidden';
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // Toggle menu on button click
+    mobileMenuBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+
+    // Close menu on window resize if open
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991 && mainNav.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
+  </script>
+</body>
+</html>

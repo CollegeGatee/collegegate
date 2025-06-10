@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Counselling Services - CollegeGate Dehradun">
+  <meta property="og:description" content="Book a counselling session with our education experts to guide your college admission process.">
+  <link rel="shortcut icon" href="https://mocha-cdn.com/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="counselling.css">
+  <title>Counselling Services - CollegeGate Dehradun</title>
+  <script src="theme.js" defer></script>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-content">
+      <a href="index.html" class="logo" aria-label="College Gate Home">
+        <img src="Classical_College_Gate_Logo__1_-removebg-preview.png" alt="College Gate Logo" width="180" height="50">
+        College<span>Gate</span>
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-wrapper" id="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="colleges.html" class="nav-link">Colleges</a></li>
+          <li><a href="counselling.html" class="nav-link active">Counselling</a></li>
+          <li><a href="comparison.html" class="nav-link">Compare</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <a href="tel:+919193993693" class="contact-btn">
+            <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Call Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Spacer -->
+  <div style="height: 80px;"></div>
+
+  <main>
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="counselling-hero">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <h1 class="hero-title">Expert <span>Counselling</span> Services</h1>
+        <p class="hero-subtitle">Get personalized guidance from our experienced counsellors to make informed decisions about your education journey. Book a session today and take the first step towards your dream college.</p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="document.getElementById('booking-form').scrollIntoView({behavior: 'smooth'})">
+            Book a Session
+          </button>
+          <button class="btn-secondary" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">
+            View Pricing
+          </button>
+        </div>
+      </section>
+      
+      <!-- Services Section -->
+      <section class="counselling-section reveal">
+        <h2>Our Counselling Services</h2>
+        <div class="counselling-grid">
+          <div class="counselling-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1000&auto=format&fit=crop" alt="Career Guidance">
+            </div>
+            <div class="card-content">
+              <h3>Career Guidance</h3>
+              <p>
+                Explore various career paths and get expert advice on choosing the right course based on your interests and aptitude.
+              </p>
+              <div class="card-actions">
+                <span class="card-price"><del style="color: var(--text)">₹999</del> <span style="color: red">FREE</span></span>
+                <button class="btn-primary" onclick="document.getElementById('booking-form').scrollIntoView({behavior: 'smooth'})">Book Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="counselling-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000&auto=format&fit=crop" alt="College Selection">
+            </div>
+            <div class="card-content">
+              <h3>College Selection</h3>
+              <p>
+                Get personalized recommendations for colleges based on your academic profile, preferences, and budget.
+              </p>
+              <div class="card-actions">
+                <span class="card-price"><del style="color: var(--text)">₹1499</del> <span style="color: red">FREE</span></span>
+                <button class="btn-primary" onclick="document.getElementById('booking-form').scrollIntoView({behavior: 'smooth'})">Book Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="counselling-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1000&auto=format&fit=crop" alt="Admission Guidance">
+            </div>
+            <div class="card-content">
+              <h3>Admission Guidance</h3>
+              <p>
+                Complete assistance with admission procedures, documentation, and interview preparation.
+              </p>
+              <div class="card-actions">
+                <span class="card-price"><del style="color: var(--text)">₹1999</del> <span style="color: red">FREE</span></span>
+                <button class="btn-primary" onclick="document.getElementById('booking-form').scrollIntoView({behavior: 'smooth'})">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Pricing Section -->
+      <section class="counselling-section reveal" id="pricing">
+        <h2>Session Pricing</h2>
+        <table class="session-table">
+          <thead>
+            <tr>
+              <th>Service Type</th>
+              <th>Duration</th>
+              <th>Price</th>
+              <th>Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Basic Consultation</td>
+              <td>30 minutes</td>
+              <td><span style="color: red">FREE</span></td>
+              <td>Career guidance, Course selection</td>
+            </tr>
+            <tr>
+              <td>Standard Session</td>
+              <td>45 minutes</td>
+              <td><span style="color: red">FREE</span></td>
+              <td>College selection, Admission process guidance</td>
+            </tr>
+            <tr>
+              <td>Premium Package</td>
+              <td>60 minutes</td>
+              <td><span style="color: red">FREE</span></td>
+              <td>Complete admission assistance, Interview preparation</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- Booking Form -->
+      <section class="counselling-section reveal" id="booking-form">
+        <h2>Book a Counselling Session</h2>
+        <div class="booking-form">
+          <form id="counselling-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" class="form-control" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-control" required placeholder="Enter your email address">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" required placeholder="Enter your phone number">
+            </div>
+            
+            <div class="form-group">
+              <label>Preferred Session Type</label>
+              <div class="radio-group">
+                <label class="radio-container">
+                  <input type="radio" name="session-type" value="basic" required>
+                  Basic Consultation
+                </label>
+                <label class="radio-container">
+                  <input type="radio" name="session-type" value="standard">
+                  Standard Session
+                </label>
+                <label class="radio-container">
+                  <input type="radio" name="session-type" value="premium">
+                  Premium Package
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="time">Preferred Time</label>
+              <select id="time" class="form-control" required>
+                <option value="">Select a time slot</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Additional Notes (Optional)</label>
+              <textarea id="message" class="form-control" rows="4" placeholder="Any specific requirements or questions?"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primary">Book Session</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-logo">College<span>Gate</span></h3>
+          <p>
+            Your comprehensive guide to colleges in Dehradun.
+            Get information about fees, admission process, and counselling.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="colleges.html">Colleges</a></li>
+            <li><a href="counselling.html">Counselling</a></li>
+            <li><a href="comparison.html">Compare Fees</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Top Colleges</h3>
+          <ul class="footer-links">
+            <li><a href="#">UPES</a></li>
+            <li><a href="#">Graphic Era University</a></li>
+            <li><a href="#">Jigyasa University</a></li>
+            <li><a href="#">COER University</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <div class="contact-info">
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Ballupur Dehradun, Uttarakhand - 248001
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              +91 135 2741487
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              info@collegegate.co
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> CollegeGate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="theme.js"></script>
+  <script src="utils.js"></script>
+  <script>
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mainNav = document.getElementById('main-nav');
+    const body = document.body;
+    
+    // Create overlay element
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'menu-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    function toggleMenu() {
+      const isOpen = mainNav.classList.contains('active');
+      
+      if (isOpen) {
+        mainNav.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        mainNav.classList.add('active');
+        mobileMenuBtn.classList.add('active');
+        overlay.classList.add('active');
+        body.style.overflow = 'hidden';
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // Toggle menu on button click
+    mobileMenuBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+
+    // Close menu on window resize if open
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991 && mainNav.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
+  </script>
+  <script>
+// Counselling form submission
+document.getElementById('counselling-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const submitBtn = this.querySelector('.btn-primary');
+  const originalText = submitBtn.innerHTML;
+  
+  // Show loading state
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = 'Booking... ⌛';
+  
+  try {
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      number: document.getElementById('phone').value,
+      presess: document.querySelector('input[name="session-type"]:checked').value,
+      predate: document.getElementById('date').value,
+      pretime: document.getElementById('time').value,
+      message: document.getElementById('message').value
+    };
+    
+    const response = await fetch('http://localhost:8000/counselling', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    });
+    
+    const result = await response.json();
+    
+    
+    if (result.success) {
+      // Show success message
+      alert('Your counselling session has been booked successfully! We will confirm your appointment soon.');
+      this.reset(); // Reset form
+    } else {
+      // Show error message
+      if (result.conflictType === 'time_slot_taken') {
+        alert('This time slot is already booked. Please choose a different time.');
+      } else {
+        alert(result.message || 'Something went wrong. Please try again.');
+      }
+    }
+    
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error:', error,'Network error. Please check your connection and try again.');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalText;
+  }
+});
+
+// Optional: Check available time slots when date changes
+document.getElementById('date').addEventListener('change', async function() {
+  const selectedDate = this.value;
+  if (!selectedDate) return;
+  
+  try {
+    const response = await fetch(`http://localhost:3000/api/counselling/available-slots?date=${selectedDate}`);
+    const result = await response.json();
+    
+    if (result.success) {
+      const timeSelect = document.getElementById('time');
+      const options = timeSelect.querySelectorAll('option[value]');
+      
+      // Reset all options
+      options.forEach(option => {
+        option.disabled = false;
+        option.textContent = option.textContent.replace(' (Booked)', '');
+      });
+      
+      // Disable booked slots
+      result.data.bookedSlots.forEach(bookedTime => {
+        const option = timeSelect.querySelector(`option[value="${bookedTime}"]`);
+        if (option) {
+          option.disabled = true;
+          option.textContent += ' (Booked)';
+        }
+      });
+    }
+  } catch (error) {
+    console.error('Error checking availability:', error);
+  }
+});
+
+// Set minimum date to today
+document.getElementById('date').min = new Date().toISOString().split('T')[0];
+</script>
+</body>
+</html>
