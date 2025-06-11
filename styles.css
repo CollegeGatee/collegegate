@@ -4729,3 +4729,8 @@
       bottom: 0.75rem;
     }
   }
+
+  [data-theme="dark"] .navbar a,
+  [data-theme="dark"] .nav-link {
+    color: #fff !important;
+  }
