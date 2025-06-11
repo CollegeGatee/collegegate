@@ -8,6 +8,93 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="colleges.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .search-box-large {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    
+    .clear-button {
+      position: absolute;
+      right: 50px;
+      background: none;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      color: #666;
+      transition: color 0.2s;
+    }
+    
+    .clear-button:hover {
+      color: #333;
+    }
+    
+    .search-button {
+      position: absolute;
+      right: 10px;
+    }
+
+    /* Active Filters Styles */
+    .active-filters {
+      margin: 15px 0;
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+
+    .active-filters-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .filter-tag {
+      display: inline-flex;
+      align-items: center;
+      background: #e9ecef;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: #495057;
+    }
+
+    .filter-tag .remove-filter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 8px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #dee2e6;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background-color 0.2s;
+    }
+
+    .filter-tag .remove-filter:hover {
+      background: #ced4da;
+    }
+
+    .clear-all-btn {
+      background: none;
+      border: none;
+      color: #6c757d;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .clear-all-btn:hover {
+      background: #e9ecef;
+      color: #495057;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -60,6 +147,12 @@
       <section class="filter-section">
         <div class="search-box-large">
           <input type="text" id="college-search" placeholder="Search colleges by name, course, or location...">
+          <button id="clear-search" class="clear-button" aria-label="Clear search" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
           <button id="search-button" class="search-button" aria-label="Search colleges">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
@@ -67,6 +160,9 @@
             </svg>
           </button>
         </div>
+
+     
+
         <div class="filter-grid">
           <select class="filter-select" id="course-filter">
             <option value="">All Courses</option>
@@ -131,6 +227,14 @@
 <option value="Puducherry">Puducherry</option>
           </select>
         </div>
+
+           <!-- Active Filters Section -->
+           <div id="active-filters" class="active-filters" style="display: none;">
+            <div class="active-filters-container">
+              <!-- Active filters will be added here dynamically -->
+            </div>
+            <button id="clear-all-filters" class="clear-all-btn">Clear All</button>
+          </div>  
       </section>
       
       <!-- Results Section -->
@@ -221,6 +325,107 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mainNav = document.getElementById('main-nav');
     const body = document.body;
+    
+    // Search functionality
+    const searchInput = document.getElementById('college-search');
+    const clearButton = document.getElementById('clear-search');
+    const activeFilters = document.getElementById('active-filters');
+    const activeFiltersContainer = document.querySelector('.active-filters-container');
+    const clearAllFiltersBtn = document.getElementById('clear-all-filters');
+    
+    // Show/hide clear button based on input
+    searchInput.addEventListener('input', function() {
+      clearButton.style.display = this.value ? 'block' : 'none';
+      updateActiveFilters();
+    });
+    
+    // Clear search input
+    clearButton.addEventListener('click', function() {
+      searchInput.value = '';
+      clearButton.style.display = 'none';
+      // Trigger search to update results
+      searchInput.dispatchEvent(new Event('input'));
+    });
+
+    // Function to update active filters display
+    function updateActiveFilters() {
+      const filters = [];
+      
+      // Check search input
+      if (searchInput.value) {
+        filters.push({
+          type: 'search',
+          label: `Search: ${searchInput.value}`,
+          value: searchInput.value
+        });
+      }
+
+      // Check all select filters
+      document.querySelectorAll('.filter-select').forEach(select => {
+        if (select.value) {
+          filters.push({
+            type: select.id,
+            label: `${select.options[select.selectedIndex].text}`,
+            value: select.value
+          });
+        }
+      });
+
+      // Update active filters display
+      if (filters.length > 0) {
+        activeFilters.style.display = 'block';
+        activeFiltersContainer.innerHTML = filters.map(filter => `
+          <div class="filter-tag" data-type="${filter.type}" data-value="${filter.value}">
+            ${filter.label}
+            <button class="remove-filter" aria-label="Remove filter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        `).join('');
+
+        // Add click handlers for remove buttons
+        document.querySelectorAll('.remove-filter').forEach(button => {
+          button.addEventListener('click', function() {
+            const filterTag = this.closest('.filter-tag');
+            const filterType = filterTag.dataset.type;
+            const filterValue = filterTag.dataset.value;
+
+            if (filterType === 'search') {
+              searchInput.value = '';
+              clearButton.style.display = 'none';
+            } else {
+              const select = document.getElementById(filterType);
+              if (select) {
+                select.value = '';
+              }
+            }
+
+            // Trigger search update
+            searchInput.dispatchEvent(new Event('input'));
+          });
+        });
+      } else {
+        activeFilters.style.display = 'none';
+      }
+    }
+
+    // Clear all filters
+    clearAllFiltersBtn.addEventListener('click', function() {
+      searchInput.value = '';
+      clearButton.style.display = 'none';
+      document.querySelectorAll('.filter-select').forEach(select => {
+        select.value = '';
+      });
+      searchInput.dispatchEvent(new Event('input'));
+    });
+
+    // Update active filters when any filter changes
+    document.querySelectorAll('.filter-select').forEach(select => {
+      select.addEventListener('change', updateActiveFilters);
+    });
     
     // Create overlay element
     let overlay = document.querySelector('.menu-overlay');
