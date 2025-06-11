@@ -2838,6 +2838,7 @@
     position: fixed;
     bottom: 2rem;
     right: 2rem;
+    left: auto;
     z-index: 1000;
   }
 
@@ -2845,6 +2846,7 @@
     position: absolute;
     bottom: 80px;
     right: 0;
+    left: auto;
     width: 400px;
     height: 540px;
     background: white;
@@ -2855,6 +2857,7 @@
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.3s ease;
+    z-index: 2000;
   }
 
   .chat-frame.active {
@@ -2897,12 +2900,6 @@
     transform: rotate(180deg);
   }
 
-  .chat-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   .chat-icon svg {
     stroke: currentColor;
     width: 28px;
@@ -2912,27 +2909,62 @@
   /* Mobile Responsive Styles */
   @media (max-width: 768px) {
     .chat-container {
-      bottom: 1rem;
       right: 1rem;
+      left: auto;
+      bottom: 1rem;
     }
-
     .chat-frame {
-      width: calc(100vw - 2rem);
+      position: fixed;
+      left: 0;
+      right: auto;
+      top: auto;
+      width: 95vw;
+      max-width: 420px;
+      min-width: 260px;
       height: calc(100vh - 120px);
-      bottom: 70px;
-      right: 0;
-      border-radius: 16px 16px 0 0;
       max-height: 600px;
+      bottom: 70px;
+      border-radius: 16px 16px 0 0;
+      transform: none;
+      z-index: 2000;
     }
-
     .floating-chat-btn {
       width: 50px;
       height: 50px;
     }
-    
     .chat-icon svg {
       width: 24px;
       height: 24px;
+    }
+  }
+  @media (max-width: 480px) {
+    .chat-container {
+      right: 0.75rem;
+      left: auto;
+      bottom: 0.75rem;
+    }
+    .chat-frame {
+      position: fixed;
+      left: 0;
+      right: auto;
+      top: auto;
+      width: 98vw;
+      max-width: 100vw;
+      min-width: 200px;
+      height: calc(100vh - 100px);
+      max-height: 500px;
+      bottom: 60px;
+      border-radius: 16px 16px 0 0;
+      transform: none;
+      z-index: 2000;
+    }
+    .floating-chat-btn {
+      width: 45px;
+      height: 45px;
+    }
+    .chat-icon svg {
+      width: 20px;
+      height: 20px;
     }
   }
 
@@ -4679,5 +4711,21 @@
       max-height: 500px;
       bottom: 60px;
       border-radius: 16px 16px 0 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .chat-container {
+      right: 1rem;
+      left: auto;
+      bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .chat-container {
+      right: 0.75rem;
+      left: auto;
+      bottom: 0.75rem;
     }
   }
