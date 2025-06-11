@@ -46,25 +46,20 @@
         </svg>
       </button>
 
-      <div class="nav-wrapper" id="main-nav">
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="colleges.html" class="nav-link">Colleges</a></li>
-          <li><a href="counselling.html" class="nav-link">Counselling</a></li>
-          <li><a href="comparison.html" class="nav-link">Compare</a></li>
-          <li><a href="blog.html" class="nav-link">Blog</a></li>
-          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-        </ul>
-        
-        <div class="nav-actions">
-          <a href="tel:+919193993693" class="contact-btn">
-            <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-            Call Us
-          </a>
-        </div>
-      </div>
+      <nav class="navbar" id="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="colleges.html">Colleges</a>
+        <a href="counselling.html">Counselling</a>
+        <a href="comparison.html">Compare</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="tel:+919193993693" class="contact-btn">
+          <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          Call Us
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -204,7 +199,7 @@
               <img src="assets/images/colleges/upes/gallery/campus.jpeg" alt="UPES">
               <div class="college-overlay">
                 <span class="college-rating">4.5 ★</span>
-                <span class="college-type">Private</span>
+                <span class="college-type" style="color: black;">Private</span>
               </div>
             </div>
             <div class="college-info">
@@ -885,7 +880,7 @@
     overlay.addEventListener('click', toggleMenu);
 
     // Close menu when clicking a nav link
-    document.querySelectorAll('.nav-link').forEach(link => {
+    mainNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', toggleMenu);
     });
 
