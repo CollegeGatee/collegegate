@@ -19,31 +19,32 @@
       </a>
       
       <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-        <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24">
-          <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" class="menu-icon-hamburger" />
-          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="menu-icon-close" style="display: none;" />
-        </svg>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
-      <nav class="navbar" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="colleges.html">Colleges</a>
-        <a href="counselling.html">Counselling</a>
-        <a href="comparison.html">Compare</a>
-        <a href="blog.html" class="active">Blog</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="tel:+919193993693" class="contact-btn">
-          <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
-          Call Us
-        </a>
-      </nav>
+      <div class="nav-wrapper" id="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="colleges.html" class="nav-link">Colleges</a></li>
+          <li><a href="counselling.html" class="nav-link">Counselling</a></li>
+          <li><a href="comparison.html" class="nav-link">Compare</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <a href="tel:+919193993693" class="contact-btn">
+            <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Call Us
+          </a>
+        </div>
+      </div>
     </div>
   </header>
-
-  <!-- Spacer -->
-  <div style="height: 80px;"></div>
 
   <main>
     <!-- Blog Hero Section -->
@@ -92,7 +93,7 @@
                 <span class="author-role">Education Counselor</span>
               </div>
             </div>
-            <a href="#" class="btn-primary read-more-btn">Read Full Story</a>
+            <a href="blog-post-1.html" class="btn-primary read-more-btn">Read Full Story</a>
           </div>
           <div class="featured-post-image">
             <img src="assets/images/colleges/graphic-era/gallery/geu.jpeg" alt="Graphic Era Campus">
@@ -135,7 +136,7 @@
                   <img src="SHEHNAAZ (JIGYASA) 1.JPG" alt="Author" class="author-image">
                   <span class="author-name">Shehnaaz</span>
                 </div>
-                <a href="#" class="read-more">Continue Reading →</a>
+                <a href="blog-post-2.html" class="read-more">Continue Reading →</a>
               </div>
             </div>
           </article>
@@ -158,7 +159,7 @@
                   <img src="mukoot sir solo.JPG" alt="Author" class="author-image">
                   <span class="author-name">Mukoot Yadav</span>
                 </div>
-                <a href="#" class="read-more">Continue Reading →</a>
+                <a href="blog-post-3.html" class="read-more">Continue Reading →</a>
               </div>
             </div>
           </article>
@@ -181,7 +182,7 @@
                   <img src="HR Team.JPG" alt="Author" class="author-image">
                   <span class="author-name">HR Team</span>
                 </div>
-                <a href="#" class="read-more">Continue Reading →</a>
+                <a href="blog-post-4.html" class="read-more">Continue Reading →</a>
               </div>
             </div>
           </article>
@@ -303,21 +304,6 @@
     </div>
   </footer>
 
-  <!-- Remove the theme-toggle button from the header and add this before the closing </body> tag -->
-  <button class="theme-toggle floating-theme-toggle" aria-label="Toggle dark mode" style="position:fixed;bottom:8.5rem;right:2rem;z-index:2001;background:#007bff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.15);padding:0.75rem;display:flex;align-items:center;justify-content:center;color:white;">
-    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="5"/>
-      <line x1="12" y1="1" x2="12" y2="3"/>
-      <line x1="12" y1="21" x2="12" y2="23"/>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-      <line x1="1" y1="12" x2="3" y2="12"/>
-      <line x1="21" y1="12" x2="23" y2="12"/>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-    </svg>
-    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
-  </button>
 
   <script src="main.js"></script>
   <script src="blog.js"></script>
@@ -430,7 +416,7 @@
     overlay.addEventListener('click', toggleMenu);
 
     // Close menu when clicking a nav link
-    mainNav.querySelectorAll('a').forEach(link => {
+    document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', toggleMenu);
     });
 
@@ -440,53 +426,6 @@
         toggleMenu();
       }
     });
-
-    // Handle scroll
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      const header = document.getElementById('header');
-      
-      if (currentScroll <= 0) {
-        header.classList.remove('scroll-up');
-        header.classList.remove('scroll-down');
-        return;
-      }
-      
-      if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-        // Scrolling down
-        header.classList.remove('scroll-up');
-        header.classList.add('scroll-down');
-      } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-        // Scrolling up
-        header.classList.remove('scroll-down');
-        header.classList.add('scroll-up');
-      }
-      lastScroll = currentScroll;
-    });
-  </script>
-
-  <!-- Floating Chat Container -->
-  <div class="chat-container" id="chat-container">
-    <div class="chat-frame" id="chat-frame">
-      <iframe src="https://cg-chatbot-p4be.onrender.com" frameborder="0"></iframe>
-    </div>
-    <button class="floating-chat-btn" id="chat-toggle">
-      <div class="chat-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-        </svg>
-      </div>
-    </button>
-  </div>
-
-  <script>
-    // Chat toggle functionality
-    document.getElementById('chat-toggle').addEventListener('click', function() {
-      const chatFrame = document.getElementById('chat-frame');
-      chatFrame.classList.toggle('active');
-      this.classList.toggle('active');
-    });
   </script>
 </body>
-</html> 
+</html>

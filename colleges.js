@@ -197,7 +197,7 @@ function renderColleges(collegeData) {
       ? college.courses.map(course => course.name).join(', ')
       : '';
     
-    card.innerHTML = `
+    card.innerHTML = `<a href="college-details.html?id=${college.id}" style="padding:0;margin:0;text-decoration:none">
       <div class="college-image-wrapper">
         <img src="${college.image}" alt="${college.name}" class="college-image" onerror="this.src='college_images/default-college.jpg'">
         <span class="college-badge">${college.rating} ★</span>
@@ -226,7 +226,7 @@ function renderColleges(collegeData) {
           <a href="college-details.html?id=${college.id}" class="action-button action-primary">View Details</a>
           <a href="tel:${college.contact || '+919193993693'}" class="action-button action-secondary">Contact</a>
         </div>
-      </div>
+      </div></a>
     `;
 
     container.appendChild(card);
