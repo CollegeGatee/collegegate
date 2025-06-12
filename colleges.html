@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
       display: flex;
       align-items: center;
     }
-    
+
     .clear-button {
       position: absolute;
       right: 50px;
@@ -25,11 +26,11 @@
       color: #666;
       transition: color 0.2s;
     }
-    
+
     .clear-button:hover {
       color: #333;
     }
-    
+
     .search-button {
       position: absolute;
       right: 10px;
@@ -96,6 +97,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Header -->
   <header class="header" id="header">
@@ -104,11 +106,14 @@
         <img src="Classical_College_Gate_Logo__1_-removebg-preview.png" alt="College Gate Logo" width="180" height="50">
         College<span>Gate</span>
       </a>
-      
-      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="main-nav">
         <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24">
           <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" class="menu-icon-hamburger" />
-          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="menu-icon-close" style="display: none;" />
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+            class="menu-icon-close" style="display: none;" />
         </svg>
       </button>
 
@@ -121,7 +126,8 @@
         <a href="contact.html">Contact Us</a>
         <a href="tel:+919193993693" class="contact-btn">
           <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
           </svg>
           Call Us
         </a>
@@ -140,28 +146,31 @@
         <div class="hero-blob hero-blob-1"></div>
         <div class="hero-blob hero-blob-2"></div>
         <h1 class="hero-title">Discover the Best Colleges in Dehradun</h1>
-        <p>Explore comprehensive information about top colleges in Dehradun. Compare fees, courses, and facilities to make an informed decision about your future.</p>
+        <p>Explore comprehensive information about top colleges in Dehradun. Compare fees, courses, and facilities to
+          make an informed decision about your future.</p>
       </section>
-      
+
       <!-- Filter Section -->
       <section class="filter-section">
         <div class="search-box-large">
           <input type="text" id="college-search" placeholder="Search colleges by name, course, or location...">
           <button id="clear-search" class="clear-button" aria-label="Clear search" style="display: none;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </button>
           <button id="search-button" class="search-button" aria-label="Search colleges">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </button>
         </div>
 
-     
+
 
         <div class="filter-grid">
           <select class="filter-select" id="course-filter">
@@ -188,55 +197,55 @@
             <option value="4.5">4.5+ ★</option>
             <option value="4.0">4.0+ ★</option>
             <option value="3.5">3.5+ ★</option>
-            </select>
+          </select>
           <select class="filter-select" id="state-filter">
             <option value="">State</option>
             <option value="Uttarakhand">Uttarakhand*</option>
             <option value="Andhra Pradesh">Andhra Pradesh</option>
-<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-<option value="Assam">Assam</option>
-<option value="Bihar">Bihar</option>
-<option value="Chhattisgarh">Chhattisgarh</option>
-<option value="Goa">Goa</option>
-<option value="Gujarat">Gujarat</option>
-<option value="Haryana">Haryana</option>
-<option value="Himachal Pradesh">Himachal Pradesh</option>
-<option value="Jharkhand">Jharkhand</option>
-<option value="Karnataka">Karnataka</option>
-<option value="Kerala">Kerala</option>
-<option value="Madhya Pradesh">Madhya Pradesh</option>
-<option value="Maharashtra">Maharashtra</option>
-<option value="Manipur">Manipur</option>
-<option value="Meghalaya">Meghalaya</option>
-<option value="Mizoram">Mizoram</option>
-<option value="Nagaland">Nagaland</option>
-<option value="Odisha">Odisha</option>
-<option value="Punjab">Punjab</option>
-<option value="Rajasthan">Rajasthan</option>
-<option value="Sikkim">Sikkim</option>
-<option value="Tamil Nadu">Tamil Nadu</option>
-<option value="Telangana">Telangana</option>
-<option value="Tripura">Tripura</option>
-<option value="Uttar Pradesh">Uttar Pradesh</option>
-<option value="West Bengal">West Bengal</option>
-<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-<option value="Chandigarh">Chandigarh</option>
-<option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
-<option value="Delhi">Delhi</option>
-<option value="Lakshadweep">Lakshadweep</option>
-<option value="Puducherry">Puducherry</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Puducherry">Puducherry</option>
           </select>
         </div>
 
-           <!-- Active Filters Section -->
-           <div id="active-filters" class="active-filters" style="display: none;">
-            <div class="active-filters-container">
-              <!-- Active filters will be added here dynamically -->
-            </div>
-            <button id="clear-all-filters" class="clear-all-btn">Clear All</button>
-          </div>  
+        <!-- Active Filters Section -->
+        <div id="active-filters" class="active-filters" style="display: none;">
+          <div class="active-filters-container">
+            <!-- Active filters will be added here dynamically -->
+          </div>
+          <button id="clear-all-filters" class="clear-all-btn">Clear All</button>
+        </div>
       </section>
-      
+
       <!-- Results Section -->
       <section class="colleges-results">
         <div class="results-header">
@@ -251,19 +260,25 @@
             </select>
           </div>
         </div>
-        
+
         <!-- College Grid -->
         <div id="colleges-grid" class="college-grid">
           <!-- College cards will be added here by JavaScript -->
         </div>
-        
+
         <!-- No Results Message -->
         <div id="no-results" class="no-results" style="display: none;">
           <div class="no-results-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
           </div>
           <h3>No Colleges Found</h3>
-          <p>We couldn't find any colleges matching your filters. Try adjusting your search criteria or clear all filters to see all options.</p>
+          <p>We couldn't find any colleges matching your filters. Try adjusting your search criteria or clear all
+            filters to see all options.</p>
           <button id="reset-filters" class="btn-primary">Clear All Filters</button>
         </div>
       </section>
@@ -276,9 +291,10 @@
       <div class="footer-content">
         <div class="footer-column">
           <h3 class="footer-logo">College<span>Gate</span></h3>
-          <p>Your comprehensive guide to colleges in Dehradun. Get information about fees, admission process, and counselling.</p>
+          <p>Your comprehensive guide to colleges in Dehradun. Get information about fees, admission process, and
+            counselling.</p>
         </div>
-        
+
         <div class="footer-column">
           <h3>Quick Links</h3>
           <ul class="footer-links">
@@ -290,26 +306,39 @@
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-column">
           <h3>Contact Us</h3>
           <div class="contact-info">
             <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
               GMS Road, Dehradun, Uttarakhand - 248001
             </p>
             <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
               +91 9193993693
             </p>
             <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
               info@collegegate.co
             </p>
           </div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p>&copy; 2024 CollegeGate. All rights reserved.</p>
       </div>
@@ -325,22 +354,22 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mainNav = document.getElementById('main-nav');
     const body = document.body;
-    
+
     // Search functionality
     const searchInput = document.getElementById('college-search');
     const clearButton = document.getElementById('clear-search');
     const activeFilters = document.getElementById('active-filters');
     const activeFiltersContainer = document.querySelector('.active-filters-container');
     const clearAllFiltersBtn = document.getElementById('clear-all-filters');
-    
+
     // Show/hide clear button based on input
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
       clearButton.style.display = this.value ? 'block' : 'none';
       updateActiveFilters();
     });
-    
+
     // Clear search input
-    clearButton.addEventListener('click', function() {
+    clearButton.addEventListener('click', function () {
       searchInput.value = '';
       clearButton.style.display = 'none';
       // Trigger search to update results
@@ -350,7 +379,7 @@
     // Function to update active filters display
     function updateActiveFilters() {
       const filters = [];
-      
+
       // Check search input
       if (searchInput.value) {
         filters.push({
@@ -388,7 +417,7 @@
 
         // Add click handlers for remove buttons
         document.querySelectorAll('.remove-filter').forEach(button => {
-          button.addEventListener('click', function() {
+          button.addEventListener('click', function () {
             const filterTag = this.closest('.filter-tag');
             const filterType = filterTag.dataset.type;
             const filterValue = filterTag.dataset.value;
@@ -413,7 +442,7 @@
     }
 
     // Clear all filters
-    clearAllFiltersBtn.addEventListener('click', function() {
+    clearAllFiltersBtn.addEventListener('click', function () {
       searchInput.value = '';
       clearButton.style.display = 'none';
       document.querySelectorAll('.filter-select').forEach(select => {
@@ -426,7 +455,7 @@
     document.querySelectorAll('.filter-select').forEach(select => {
       select.addEventListener('change', updateActiveFilters);
     });
-    
+
     // Create overlay element
     let overlay = document.querySelector('.menu-overlay');
     if (!overlay) {
@@ -437,7 +466,7 @@
 
     function toggleMenu() {
       const isOpen = mainNav.classList.contains('active');
-      
+
       if (isOpen) {
         mainNav.classList.remove('active');
         mobileMenuBtn.classList.remove('active');
@@ -454,7 +483,7 @@
     }
 
     // Toggle menu on button click
-    mobileMenuBtn.addEventListener('click', function(e) {
+    mobileMenuBtn.addEventListener('click', function (e) {
       e.stopPropagation();
       toggleMenu();
     });
@@ -479,13 +508,13 @@
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
       const header = document.getElementById('header');
-      
+
       if (currentScroll <= 0) {
         header.classList.remove('scroll-up');
         header.classList.remove('scroll-down');
         return;
       }
-      
+
       if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
         // Scrolling down
         header.classList.remove('scroll-up');
@@ -500,19 +529,48 @@
   </script>
 
   <!-- Remove the theme-toggle button from the header and add this before the closing </body> tag -->
-  <button class="theme-toggle floating-theme-toggle" aria-label="Toggle dark mode" style="position:fixed;bottom:8.5rem;right:2rem;z-index:2001;background:#007bff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.15);padding:0.75rem;display:flex;align-items:center;justify-content:center;color:white;">
-    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="5"/>
-      <line x1="12" y1="1" x2="12" y2="3"/>
-      <line x1="12" y1="21" x2="12" y2="23"/>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-      <line x1="1" y1="12" x2="3" y2="12"/>
-      <line x1="21" y1="12" x2="23" y2="12"/>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+  <button class="theme-toggle floating-theme-toggle" aria-label="Toggle dark mode"
+    style="position:fixed;bottom:8.5rem;right:2rem;z-index:2001;background:#007bff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.15);padding:0.75rem;display:flex;align-items:center;justify-content:center;color:white;">
+    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
     </svg>
-    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+    </svg>
   </button>
+
+  <!-- Floating Chat Container -->
+  <div class="chat-container" id="chat-container">
+    <div class="chat-frame" id="chat-frame">
+      <iframe src="https://cg-chatbot-p4be.onrender.com" frameborder="0"></iframe>
+    </div>
+    <button class="floating-chat-btn" id="chat-toggle">
+      <div class="chat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </div>
+    </button>
+  </div>
+
+  <script>
+    // Chat toggle functionality
+    document.getElementById('chat-toggle').addEventListener('click', function() {
+      const chatFrame = document.getElementById('chat-frame');
+      chatFrame.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
 </body>
+
 </html>

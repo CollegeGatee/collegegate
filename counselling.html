@@ -483,5 +483,28 @@ document.getElementById('date').min = new Date().toISOString().split('T')[0];
   </svg>
   <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
 </button>
+
+<!-- Floating Chat Container -->
+<div class="chat-container" id="chat-container">
+  <div class="chat-frame" id="chat-frame">
+    <iframe src="https://cg-chatbot-p4be.onrender.com" frameborder="0"></iframe>
+  </div>
+  <button class="floating-chat-btn" id="chat-toggle">
+    <div class="chat-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+    </div>
+  </button>
+</div>
+
+<script>
+  // Chat toggle functionality
+  document.getElementById('chat-toggle').addEventListener('click', function() {
+    const chatFrame = document.getElementById('chat-frame');
+    chatFrame.classList.toggle('active');
+    this.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
